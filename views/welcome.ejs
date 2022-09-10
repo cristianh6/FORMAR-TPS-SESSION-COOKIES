@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="<%= dataForm.color %>">
+    <h1 class="welcome">
+        Hola <%= dataForm.nombre %> , elegiste el color: <%= dataForm.color %> , tu email es:
+        <%= dataForm.mail %>  y tu edad es: <%= dataForm.edad %> 
+    </h1>
+    <div class="welcomeDiv">
+        <div>
+            <a href="/logout">Desloguearse</a>
+        </div>
+        <div>
+            <a href="/welcome2">Ir a la segunda vista</a>
+        </div>
+        <div>
+            <a href="/colorout">Olvidar color</a>
+        </div>
+    </div>    
+</body>
+
+</html>

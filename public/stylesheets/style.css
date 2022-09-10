@@ -1,0 +1,38 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+span {
+  color: red;
+}
+
+.rojo{
+  background-color: red;
+}
+
+.amarillo{
+  background-color: yellow;
+}
+
+.verde{
+  background-color: green;
+}
+
+.azul{
+  background-color: blue;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

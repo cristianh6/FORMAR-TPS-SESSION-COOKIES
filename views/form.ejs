@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Formulario</h2>
+    <% if (locals.userLogin) { %>
+        <h3>Hola <%= userLogin.nombre %></h3>
+    <% } %>
+
+    <form method="POST" action=""
+      <div>
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" name="nombre""/>
+
+      </div>
+      <div>
+        <label for="colors">Ingrese un color</label>
+      <select name="colors" id="colors">
+        <option value=""></option>
+        <option value="red" <%= locals.old && old.colors == "red" ? 'selected' : null %> >Rojo</option>
+        <option value="yellow" <%= locals.old && old.colors == "yellow" ? 'selected' : null %>>Amarillo</option>
+        <option value="green" <%= locals.old && old.colors == "green" ? 'selected' : null %>>Verde</option>
+        <option value="blue" <%= locals.old && old.colors == "blue" ? 'selected' : null %>>Azul</option>
+      </select>
+        <span><%= locals.errors && errors.color ? errors.color.msg : null %></span>   
+      </div>
+      <div>
+        <label for="email">Ingrese su email</label>
+        <input type="email" name="email" id=""/>
+        <span><%= locals.errors && errors.email ? errors.email.msg : null %></span>  
+      </div>
+      <div>
+        <label for="edad">Ingrese su edad</label>
+        <input type="number" name="edad" id=""/>
+        <span><%= locals.errors && errors.edad ? errors.edad.msg : null %></span> 
+      </div>
+      <div>
+        <label for="colorCheck">Recordar color</label>
+        <input type="checkbox" name="color-check" id=""/>
+      </div>
+      <div>
+        <button type="submit">Envíar</button>
+      </div>
+    </form>
+    
+  </body>
+</html>
